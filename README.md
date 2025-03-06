@@ -1,2 +1,1 @@
-# dotnet-template
-A .NET template for new repos.
+# repo-name
