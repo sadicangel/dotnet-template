@@ -400,6 +400,3 @@ FodyWeavers.xsd
 # Verify
 *.received.*
 *.received/
-
-# Local NuGet cache
-pckgs/
