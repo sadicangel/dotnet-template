@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**"/>
+    <Content Include="templates/**/*" Exclude="templates/**/bin/**;templates/**/obj/**" />
     <Compile Remove="**/*" />
   </ItemGroup>
 

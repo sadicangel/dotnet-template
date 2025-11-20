@@ -1,15 +1,32 @@
 {
-    "$schema": "https://www.schemastore.org/template.json",
-    "author": "sadicangel",
-    "identity": "SadicAngel.Templates.Repo",
-    "name": "Skeletal Repository Template",
-    "shortName": "sa-repo",
-    "classifications": [
-        "skeleton",
-        "solution"
-    ],
-    "tags": {
-        "type": "solution",
-        "language": "C#"
+  "$schema": "https://www.schemastore.org/template.json",
+  "author": "sadicangel",
+  "identity": "SadicAngel.Templates.Repo",
+  "name": "Skeletal Repository Template",
+  "shortName": "sa-repo",
+  "classifications": [
+    "skeleton",
+    "solution"
+  ],
+  "tags": {
+    "type": "solution",
+    "language": "C#"
+  },
+  "sources": [
+    {
+      "source": "../_shared",
+      "target": "./",
+      "modifiers": [
+        {
+          "rename": {
+            "github": ".github"
+          }
+        }
+      ]
+    },
+    {
+      "source": "./",
+      "target": "./"
     }
+  ]
 }

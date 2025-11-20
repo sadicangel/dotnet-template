@@ -1,60 +1,64 @@
 {
-    "$schema": "https://www.schemastore.org/template.json",
-    "author": "sadicangel",
-    "identity": "SadicAngel.Templates.Library",
-    "name": "Library Template",
-    "shortName": "sa-lib",
-    "classifications": [
-        "library",
-        "project"
-    ],
-    "tags": {
-        "type": "solution",
-        "language": "C#"
+  "$schema": "https://www.schemastore.org/template.json",
+  "author": "sadicangel",
+  "identity": "SadicAngel.Templates.Library",
+  "name": "Library Template",
+  "shortName": "sa-lib",
+  "classifications": [
+    "library",
+    "project"
+  ],
+  "tags": {
+    "type": "solution",
+    "language": "C#"
+  },
+  "sourceName": "Solution0",
+  "symbols": {
+    "library": {
+      "type": "derived",
+      "datatype": "string",
+      "valueSource": "name",
+      "valueTransform": "namespace",
+      "replaces": "Library0",
+      "fileRename": "Library0"
+    }
+  },
+  "forms": {
+    "alphanum": {
+      "identifier": "replace",
+      "pattern": "[^a-zA-Z0-9]",
+      "replacement": ""
     },
-    "sourceName": "Solution0",
-    "symbols": {
-        "library": {
-            "type": "derived",
-            "datatype": "string",
-            "valueSource": "name",
-            "valueTransform": "namespace",
-            "replaces": "Library0",
-            "fileRename": "Library0"
-        }
+    "removeDashes": {
+      "identifier": "replace",
+      "pattern": "-",
+      "replacement": ""
     },
-    "forms": {
-        "alphanum": {
-            "identifier": "replace",
-            "pattern": "[^a-zA-Z0-9]",
-            "replacement": ""
-        },
-        "removeDashes": {
-            "identifier": "replace",
-            "pattern": "-",
-            "replacement": ""
-        },
-        "namespace": {
-            "identifier": "chain",
-            "steps": [
-                "alphanum",
-                "kebabCase",
-                "titleCase",
-                "removeDashes"
-            ]
-        }
-    },
-    "sources": [
+    "namespace": {
+      "identifier": "chain",
+      "steps": [
+        "alphanum",
+        "kebabCase",
+        "titleCase",
+        "removeDashes"
+      ]
+    }
+  },
+  "sources": [
+    {
+      "source": "../_shared",
+      "target": "./",
+      "modifiers": [
         {
-            "source": "./",
-            "target": "./",
-            "modifiers": [
-                {
-                    "rename": {
-                        "github": ".github"
-                    }
-                }
-            ]
+          "rename": {
+            "github": ".github"
+          }
         }
-    ]
+      ]
+    },
+    {
+      "source": "./",
+      "target": "./"
+    }
+  ]
 }
